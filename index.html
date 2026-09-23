@@ -6,11 +6,7 @@
 
     <title>Siddartha Bhandari | Video Editor</title>
 
-    <meta name="description"
-          content="Siddartha Bhandari - Video Editor and Creative Designer Portfolio">
-
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -19,13 +15,13 @@
         }
 
         :root {
-            --bg: #08080b;
-            --card: #121218;
-            --card2: #18181f;
+            --bg: #08090c;
+            --card: #111318;
+            --card2: #171920;
             --text: #ffffff;
-            --muted: #a7a7b2;
+            --muted: #a5a8b0;
             --accent: #e8b39d;
-            --border: #292931;
+            --border: #292c34;
         }
 
         body {
@@ -35,7 +31,7 @@
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+        /* NAVBAR */
 
         nav {
             position: fixed;
@@ -43,13 +39,13 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(8, 8, 11, 0.92);
-            backdrop-filter: blur(12px);
+            background: rgba(8,9,12,0.9);
+            backdrop-filter: blur(15px);
             border-bottom: 1px solid var(--border);
         }
 
-        .nav-container {
-            max-width: 1100px;
+        .nav {
+            max-width: 1150px;
             margin: auto;
             padding: 18px 25px;
             display: flex;
@@ -58,7 +54,7 @@
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 23px;
             font-weight: bold;
         }
 
@@ -67,16 +63,15 @@
         }
 
         nav ul {
-            display: flex;
             list-style: none;
-            gap: 25px;
+            display: flex;
+            gap: 28px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-size: 14px;
-            transition: 0.3s;
         }
 
         nav a:hover {
@@ -89,34 +84,25 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
             padding: 120px 25px 80px;
-
             background:
-                radial-gradient(
-                    circle at 80% 20%,
-                    rgba(232,179,157,0.14),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 20% 80%,
-                    rgba(232,179,157,0.08),
-                    transparent 30%
-                );
+                radial-gradient(circle at 80% 20%, rgba(232,179,157,.14), transparent 30%),
+                radial-gradient(circle at 20% 80%, rgba(232,179,157,.07), transparent 30%);
         }
 
-        .hero-container {
-            max-width: 1100px;
+        .hero-inner {
+            max-width: 1150px;
             width: 100%;
+            margin: auto;
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
+            grid-template-columns: 1.3fr .7fr;
             gap: 60px;
             align-items: center;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 8vw, 85px);
-            line-height: 1;
+            font-size: clamp(50px, 8vw, 90px);
+            line-height: .95;
             margin-bottom: 20px;
         }
 
@@ -126,8 +112,8 @@
 
         .hero h2 {
             color: var(--muted);
-            font-size: 25px;
             font-weight: normal;
+            font-size: 25px;
             margin-bottom: 20px;
         }
 
@@ -149,81 +135,73 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
         }
 
-        .btn-primary {
+        .primary {
             background: var(--accent);
             color: #111;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
+        .outline {
             border: 1px solid #555;
             color: white;
         }
 
-        .btn-outline:hover {
+        .outline:hover {
             border-color: var(--accent);
             color: var(--accent);
         }
 
-        /* PROFILE */
-
-        .profile {
+        .hero-circle {
             width: 280px;
             height: 280px;
             margin: auto;
-            border-radius: 50%;
             border: 2px solid var(--accent);
+            border-radius: 50%;
             display: flex;
-            align-items: center;
             justify-content: center;
-            text-align: center;
+            align-items: center;
             background: var(--card);
-            box-shadow: 0 0 60px rgba(232,179,157,0.15);
+            box-shadow: 0 0 70px rgba(232,179,157,.12);
         }
 
-        .profile span {
+        .hero-circle span {
             font-size: 80px;
             font-weight: bold;
             color: var(--accent);
         }
 
-        /* SECTIONS */
+        /* GENERAL SECTIONS */
 
         section {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
             padding: 100px 25px;
         }
 
-        .section-title {
+        .section-heading {
             margin-bottom: 45px;
         }
 
-        .section-title small {
+        .section-heading small {
             color: var(--accent);
-            text-transform: uppercase;
             letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
-        .section-title h2 {
-            font-size: 42px;
+        .section-heading h2 {
+            font-size: 45px;
             margin-top: 8px;
         }
 
-        .section-title p {
+        .section-heading p {
             color: var(--muted);
             max-width: 650px;
         }
 
         /* ABOUT */
 
-        .about-grid {
+        .about {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
@@ -231,14 +209,14 @@
 
         .about-card {
             background: var(--card);
-            padding: 30px;
             border: 1px solid var(--border);
             border-radius: 20px;
+            padding: 30px;
         }
 
         .about-card h3 {
             color: var(--accent);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .about-card p {
@@ -249,15 +227,15 @@
 
         .skills {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2,1fr);
             gap: 18px;
         }
 
         .skill {
             background: var(--card);
             padding: 22px;
-            border: 1px solid var(--border);
             border-radius: 15px;
+            border: 1px solid var(--border);
         }
 
         .skill-top {
@@ -272,7 +250,7 @@
 
         .bar {
             height: 7px;
-            background: #292931;
+            background: #292c34;
             border-radius: 10px;
             overflow: hidden;
         }
@@ -281,77 +259,80 @@
             display: block;
             height: 100%;
             background: var(--accent);
-            border-radius: 10px;
         }
 
-        /* PROJECTS */
+        /* VIDEO WORK */
 
-        .projects {
+        .video-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
-        .project {
+        .video-card {
             background: var(--card);
-            padding: 30px;
             border: 1px solid var(--border);
             border-radius: 20px;
-            transition: 0.3s;
+            overflow: hidden;
+            transition: .3s;
         }
 
-        .project:hover {
-            transform: translateY(-7px);
+        .video-card:hover {
+            transform: translateY(-6px);
             border-color: var(--accent);
         }
 
-        .project-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
+        .video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #050507;
         }
 
-        .project h3 {
-            margin-bottom: 10px;
+        .video-container video,
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            object-fit: cover;
         }
 
-        .project p {
+        .video-info {
+            padding: 22px;
+        }
+
+        .video-info h3 {
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
             color: var(--muted);
             font-size: 14px;
         }
 
-        /* VIDEO AREA */
-
-        .video-box {
-            background: var(--card);
-            border: 1px solid var(--border);
+        .tag {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 5px 12px;
             border-radius: 20px;
-            padding: 35px;
-            text-align: center;
-        }
-
-        .video-box h3 {
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
-
-        .video-box p {
-            color: var(--muted);
-            margin-bottom: 25px;
+            background: var(--card2);
+            color: var(--accent);
+            font-size: 12px;
         }
 
         /* CONTACT */
 
-        .contact-grid {
+        .contact {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3,1fr);
             gap: 20px;
         }
 
         .contact-card {
             background: var(--card);
-            padding: 25px;
-            border-radius: 18px;
             border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 25px;
         }
 
         .contact-card h3 {
@@ -359,18 +340,17 @@
             margin-bottom: 8px;
         }
 
-        .contact-card p,
-        .contact-card a {
+        .contact-card a,
+        .contact-card p {
             color: var(--muted);
             text-decoration: none;
-            word-break: break-word;
         }
 
         /* FOOTER */
 
         footer {
             text-align: center;
-            padding: 35px 20px;
+            padding: 35px;
             border-top: 1px solid var(--border);
             color: var(--muted);
         }
@@ -381,13 +361,13 @@
 
         /* MOBILE */
 
-        @media (max-width: 800px) {
+        @media(max-width:800px) {
 
             nav ul {
                 display: none;
             }
 
-            .hero-container {
+            .hero-inner {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
@@ -401,30 +381,24 @@
                 justify-content: center;
             }
 
-            .profile {
+            .hero-circle {
                 width: 220px;
                 height: 220px;
             }
 
-            .profile span {
+            .hero-circle span {
                 font-size: 60px;
             }
 
-            .about-grid,
-            .skills {
+            .about,
+            .skills,
+            .video-grid,
+            .contact {
                 grid-template-columns: 1fr;
             }
 
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title h2 {
-                font-size: 34px;
+            .section-heading h2 {
+                font-size: 35px;
             }
         }
 
@@ -433,435 +407,390 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+<!-- NAVIGATION -->
 
-    <nav>
-        <div class="nav-container">
+<nav>
+    <div class="nav">
 
-            <div class="logo">
-                Siddartha<span>.</span>
-            </div>
-
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-        </div>
-    </nav>
-
-
-    <!-- HOME -->
-
-    <header class="hero" id="home">
-
-        <div class="hero-container">
-
-            <div>
-
-                <h1>
-                    Siddartha<br>
-                    <span>Bhandari</span>
-                </h1>
-
-                <h2>Video Editor & Creative Designer</h2>
-
-                <p>
-                    I am a creative student interested in video editing,
-                    animation, VFX and graphic design. I enjoy creating
-                    visual content and continuously improving my skills.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#projects" class="btn btn-primary">
-                        View My Work
-                    </a>
-
-                    <a href="#contact" class="btn btn-outline">
-                        Contact Me
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="profile">
-                <span>SB</span>
-            </div>
-
+        <div class="logo">
+            Siddartha<span>.</span>
         </div>
 
-    </header>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
 
 
-    <!-- ABOUT -->
+<!-- HERO -->
 
-    <section id="about">
+<header class="hero" id="home">
 
-        <div class="section-title">
+    <div class="hero-inner">
 
-            <small>About Me</small>
+        <div>
 
-            <h2>Creative. Curious. Always Learning.</h2>
+            <h1>
+                Siddartha<br>
+                <span>Bhandari</span>
+            </h1>
+
+            <h2>Video Editor & Creative Designer</h2>
 
             <p>
-                A little about me and my creative journey.
+                Creative student passionate about video editing,
+                animation, VFX and graphic design. I create engaging
+                visual content and continuously improve my editing skills.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#work" class="btn primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-circle">
+            <span>SB</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-heading">
+
+        <small>About Me</small>
+
+        <h2>Creative. Curious. Learning.</h2>
+
+        <p>
+            A little about me and what I do.
+        </p>
+
+    </div>
+
+    <div class="about">
+
+        <div class="about-card">
+
+            <h3>Who I Am</h3>
+
+            <p>
+                I am a student studying Animation, VFX and Game Design.
+                I am interested in video editing, animation, visual
+                effects and graphic design.
             </p>
 
         </div>
 
+        <div class="about-card">
 
-        <div class="about-grid">
-
-            <div class="about-card">
-
-                <h3>Who I Am</h3>
-
-                <p>
-                    I am a student studying Animation, VFX and Game Design.
-                    I am interested in video editing, animation, visual
-                    effects and graphic design.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <h3>What I Do</h3>
-
-                <p>
-                    I create and edit videos using Adobe Premiere Pro.
-                    I also work with Adobe Photoshop and CorelDRAW
-                    for creative design projects.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-
-        <div class="section-title">
-
-            <small>My Skills</small>
-
-            <h2>Tools & Skills</h2>
+            <h3>What I Do</h3>
 
             <p>
-                Software and creative skills I am currently developing.
+                I edit videos using Adobe Premiere Pro and create
+                graphics using Adobe Photoshop and CorelDRAW.
+                I am currently building my portfolio and improving
+                my creative skills.
             </p>
 
         </div>
 
+    </div>
 
-        <div class="skills">
+</section>
 
-            <div class="skill">
 
-                <div class="skill-top">
-                    <span>Video Editing</span>
-                    <span>70%</span>
-                </div>
+<!-- SKILLS -->
 
-                <div class="bar">
-                    <span style="width:70%"></span>
-                </div>
+<section id="skills">
+
+    <div class="section-heading">
+
+        <small>Skills</small>
+
+        <h2>My Tools</h2>
+
+        <p>
+            Software and creative skills I use.
+        </p>
+
+    </div>
+
+    <div class="skills">
+
+        <div class="skill">
+            <div class="skill-top">
+                <span>Video Editing</span>
+                <span>70%</span>
+            </div>
+            <div class="bar">
+                <span style="width:70%"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <span>Premiere Pro</span>
+                <span>65%</span>
+            </div>
+            <div class="bar">
+                <span style="width:65%"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <span>Photoshop</span>
+                <span>60%</span>
+            </div>
+            <div class="bar">
+                <span style="width:60%"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <span>CorelDRAW</span>
+                <span>60%</span>
+            </div>
+            <div class="bar">
+                <span style="width:60%"></span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MY WORK -->
+
+<section id="work">
+
+    <div class="section-heading">
+
+        <small>Portfolio</small>
+
+        <h2>My Work</h2>
+
+        <p>
+            Here are some of my video editing projects.
+        </p>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <!-- VIDEO 1 -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <!--
+                REPLACE "videos/video1.mp4"
+                WITH YOUR VIDEO FILE NAME
+                -->
+
+                <video controls>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
 
             </div>
 
+            <div class="video-info">
 
-            <div class="skill">
+                <h3>Video Editing Project 01</h3>
 
-                <div class="skill-top">
-                    <span>Adobe Premiere Pro</span>
-                    <span>65%</span>
-                </div>
+                <p>
+                    Short-form video editing with cuts,
+                    transitions, music and captions.
+                </p>
 
-                <div class="bar">
-                    <span style="width:65%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-                    <span>Adobe Photoshop</span>
-                    <span>60%</span>
-                </div>
-
-                <div class="bar">
-                    <span style="width:60%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-                    <span>CorelDRAW</span>
-                    <span>60%</span>
-                </div>
-
-                <div class="bar">
-                    <span style="width:60%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-                    <span>3D Animation</span>
-                    <span>55%</span>
-                </div>
-
-                <div class="bar">
-                    <span style="width:55%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-top">
-                    <span>VFX</span>
-                    <span>50%</span>
-                </div>
-
-                <div class="bar">
-                    <span style="width:50%"></span>
-                </div>
+                <span class="tag">Video Editing</span>
 
             </div>
 
         </div>
 
-    </section>
 
+        <!-- VIDEO 2 -->
 
-    <!-- PROJECTS -->
+        <div class="video-card">
 
-    <section id="projects">
+            <div class="video-container">
 
-        <div class="section-title">
-
-            <small>Portfolio</small>
-
-            <h2>My Projects</h2>
-
-            <p>
-                My creative work and projects will be displayed here.
-            </p>
-
-        </div>
-
-
-        <div class="projects">
-
-            <div class="project">
-
-                <div class="project-icon">🎬</div>
-
-                <h3>Video Editing</h3>
-
-                <p>
-                    Short-form videos, cutting, trimming, transitions,
-                    captions, music and basic audio editing.
-                </p>
+                <video controls>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
 
             </div>
 
+            <div class="video-info">
 
-            <div class="project">
-
-                <div class="project-icon">🎨</div>
-
-                <h3>Graphic Design</h3>
+                <h3>Video Editing Project 02</h3>
 
                 <p>
-                    Creative graphics and visual designs using
-                    Photoshop and CorelDRAW.
+                    Creative edit with transitions,
+                    text and audio.
                 </p>
 
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-icon">🧊</div>
-
-                <h3>3D Animation</h3>
-
-                <p>
-                    3D animation, character animation and environment
-                    projects.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-icon">✨</div>
-
-                <h3>VFX</h3>
-
-                <p>
-                    Visual effects experiments, simulations and
-                    compositing projects.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-icon">🎮</div>
-
-                <h3>Game Design</h3>
-
-                <p>
-                    Exploring game environments, interactive experiences
-                    and game development.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <div class="project-icon">🚀</div>
-
-                <h3>Future Projects</h3>
-
-                <p>
-                    More creative projects will be added as my portfolio
-                    continues to grow.
-                </p>
+                <span class="tag">Premiere Pro</span>
 
             </div>
 
         </div>
 
-    </section>
 
+        <!-- VIDEO 3 -->
 
-    <!-- VIDEO PORTFOLIO -->
+        <div class="video-card">
 
-    <section>
+            <div class="video-container">
 
-        <div class="section-title">
+                <video controls>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
 
-            <small>Video Portfolio</small>
+            </div>
 
-            <h2>My Video Work</h2>
+            <div class="video-info">
 
-            <p>
-                I will add my edited videos and creative projects here.
-            </p>
+                <h3>Video Editing Project 03</h3>
+
+                <p>
+                    Short video project showcasing
+                    editing and storytelling.
+                </p>
+
+                <span class="tag">Editing</span>
+
+            </div>
 
         </div>
 
 
-        <div class="video-box">
+        <!-- VIDEO 4 -->
 
-            <h3>🎥 Video Projects Coming Soon</h3>
+        <div class="video-card">
 
-            <p>
-                My latest video editing projects will be showcased here.
-            </p>
+            <div class="video-container">
 
-            <a href="#contact" class="btn btn-primary">
-                Contact Me
+                <video controls>
+                    <source src="videos/video4.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+
+            </div>
+
+            <div class="video-info">
+
+                <h3>Video Editing Project 04</h3>
+
+                <p>
+                    Creative video project with
+                    effects, music and transitions.
+                </p>
+
+                <span class="tag">Creative Edit</span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-heading">
+
+        <small>Contact</small>
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+            Have a project or opportunity? Get in touch with me.
+        </p>
+
+    </div>
+
+
+    <div class="contact">
+
+        <div class="contact-card">
+
+            <h3>📧 Email</h3>
+
+            <a href="mailto:siddarthabhandari69@gmail.com">
+                siddarthabhandari69@gmail.com
             </a>
 
         </div>
 
-    </section>
+        <div class="contact-card">
 
+            <h3>📱 Phone</h3>
 
-    <!-- CONTACT -->
+            <a href="tel:+919560529370">
+                +91 9560529370
+            </a>
 
-    <section id="contact">
+        </div>
 
-        <div class="section-title">
+        <div class="contact-card">
 
-            <small>Contact</small>
-
-            <h2>Let's Work Together</h2>
+            <h3>📍 Location</h3>
 
             <p>
-                Have a project or opportunity? Feel free to contact me.
+                Greater Noida, Uttar Pradesh, India
             </p>
 
         </div>
 
+    </div>
 
-        <div class="contact-grid">
-
-            <div class="contact-card">
-
-                <h3>📧 Email</h3>
-
-                <a href="mailto:siddarthabhandari69@gmail.com">
-                    siddarthabhandari69@gmail.com
-                </a>
-
-            </div>
+</section>
 
 
-            <div class="contact-card">
+<footer>
 
-                <h3>📱 Phone</h3>
+    <p>
+        © 2026 Siddartha Bhandari.
+        Made with <span>♥</span> and creativity.
+    </p>
 
-                <a href="tel:+919560529370">
-                    +91 9560529370
-                </a>
-
-            </div>
-
-
-            <div class="contact-card">
-
-                <h3>📍 Location</h3>
-
-                <p>
-                    Greater Noida, Uttar Pradesh, India
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            © 2026 Siddartha Bhandari.
-            Made with <span>♥</span> and creativity.
-        </p>
-
-    </footer>
+</footer>
 
 </body>
 </html>
